@@ -31,6 +31,11 @@ const routes = [
         path: '/books/{bookId}',
         handler: deleteBookByIdHandler,
     },
+    {
+        method: '*',
+        path: '/{any}',
+        handler: () => 'Halaman tidak ditemukan',
+    },
 ];
 
 // eslint-disable-next-line eol-last

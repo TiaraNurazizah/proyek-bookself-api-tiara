@@ -26,7 +26,7 @@ const addBookHandler = (request, h) => {
     if (!name) {
         const response = h.response({
             status: 'fail',
-            message: 'Gagal tambah buku. Isi nama buku',
+            message: 'Gagal menambahkan buku. Mohon isi nama buku',
         });
         response.code(400);
         return response;
@@ -35,7 +35,7 @@ const addBookHandler = (request, h) => {
     if (readPage > pageCount) {
         const response = h.response({
             status: 'fail',
-            message: 'Gagal tambah buku. readPage tidak boleh lebih besar dari PageCount',
+            message: 'Gagal menambahkan buku. readPage tidak boleh lebih besar dari pageCount',
         });
         response.code(400);
         return response;
@@ -163,7 +163,7 @@ const editBookByIdHandler = (request, h) => {
     if (!name) {
         const response = h.response({
             status: 'fail',
-            message: 'Gagal memperbarui buku. Isi nama buku',
+            message: 'Gagal memperbarui buku. Mohon isi nama buku',
         });
         response.code(400);
         return response;
@@ -172,7 +172,7 @@ const editBookByIdHandler = (request, h) => {
     if (readPage > pageCount) {
         const response = h.response({
             status: 'fail',
-            message: 'Gagal memperbarui buku. readPage tidak boleh lebih besar dari PageCount',
+            message: 'Gagal memperbarui buku. readPage tidak boleh lebih besar dari pageCount',
         });
         response.code(400);
         return response;
@@ -208,7 +208,7 @@ const editBookByIdHandler = (request, h) => {
 
     const response = h.response({
         status: 'fail',
-        message: 'Gagal memperbarui buku. Id tidak ada',
+        message: 'Gagal memperbarui buku. Id tidak ditemukan',
     });
     response.code(404);
     return response;
@@ -224,7 +224,7 @@ const deleteBookByIdHandler = (request, h) => {
 
         const response = h.response({
             status: 'success',
-            message: 'Buku anda berhasil dihapus',
+            message: 'Buku berhasil dihapus',
         });
         response.code(200);
         return response;
@@ -232,7 +232,7 @@ const deleteBookByIdHandler = (request, h) => {
 
     const response = h.response({
         status: 'fail',
-        message: 'Buku anda gagal dihapus. Id tidak ditemukan',
+        message: 'Buku gagal dihapus. Id tidak ditemukan',
     });
     response.code(404);
     return response;
